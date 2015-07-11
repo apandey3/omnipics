@@ -1,7 +1,8 @@
 package org.amanda;
 
 /**
- * Created by amanda on 7/10/15.
+ * TODO: Write details of the class
+ * @author Amanda Pandey <amanda.pandey@gmail.com>
  */
 public class Filter {
 }

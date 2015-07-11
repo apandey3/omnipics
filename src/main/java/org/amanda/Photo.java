@@ -7,9 +7,8 @@ import java.util.List;
 /**
  * @author Amanda Pandey <amanda.pandey@gmail.com>
  */
-public class Photo implements Media{
+public class Photo extends DisplayMedia{
 
-    private final List<String> tags = new ArrayList<>();
     private final File photoFile;
 
     public Photo(File photoFile){
@@ -18,6 +17,10 @@ public class Photo implements Media{
 
     public List<String> getTags() {
         return tags;
+    }
+
+    public File getPhotoFile(){
+        return photoFile;
     }
 
 }
