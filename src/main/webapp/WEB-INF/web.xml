@@ -1,0 +1,25 @@
+<!--
+  ~ Copyright (c) Artsoft 2014. All Rights Reserved.
+  -->
+
+<web-app>
+    <!-- other tags omitted -->
+    <!--<listener>-->
+        <!--<listener-class>-->
+            <!--com.artsoft.memorizeit.guice.ResteasyGuiceConfig-->
+        <!--</listener-class>-->
+    <!--</listener>-->
+
+    <servlet>
+        <servlet-name>Resteasy</servlet-name>
+        <servlet-class>
+            org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Resteasy</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
