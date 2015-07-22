@@ -12,6 +12,12 @@ import java.util.List;
 public class Album extends DisplayMedia{
 
     private final List<Photo> photos = new ArrayList<>();
+    private String name;
+
+
+    public String getName(){
+        return name;
+    }
 
     @Override
     public List<String> getTags() {
@@ -42,16 +48,21 @@ public class Album extends DisplayMedia{
 
         String photoDr = photoDirectory.getName();
         String[] parts = photoDr.split("-");
+        String s="";
         for (int i = 0; i < parts.length; i++) {
             tags.add(parts[i]);
-            System.out.print(parts[i]);
+            s += " "+Character.toUpperCase(parts[i].charAt(0)) + parts[i].substring(1);
         }
+
+        this.name = s.trim();
 
         File[] pdr = photoDirectory.listFiles();
         for (int i = 0; i < pdr.length; i++){
             Photo p = new Photo(pdr[i]);
             photos.add(p);
         }
+
+
 
 
         //TODO: Collect list of files in the directory, create Photo from each file and then add Photo to photos
